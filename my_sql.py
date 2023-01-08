@@ -21,3 +21,21 @@ except:
 
 # disconnect from server
 db.close
+
+#READ Operation
+
+# Prepare SQL query to INSERT a record into the database.
+sql = "SELECT * FROM STUDENT"
+try:
+     # execute sql
+     cursor.execute(sql)
+     # Fetch all the rows in a list of lists.
+     results = cursor.fetchall()
+     for row in results:
+         f_name = row[0]
+         l_name = row[1]
+         id = row[2]
+     # print fetched result
+     #Print("name=%s,surname=%s,id=%d" % \ (f_name, l_name, id ))
+except:
+ print("Error: unable to fetch the data")
