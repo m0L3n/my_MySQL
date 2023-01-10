@@ -25,10 +25,10 @@ db.close
 #READ Operation
 
 # Prepare SQL query to INSERT a record into the database.
-sql = "SELECT * FROM STUDENT"
+sql_r = "SELECT * FROM STUDENT"
 try:
      # execute sql
-     cursor.execute(sql)
+     cursor.execute(sql_r)
      # Fetch all the rows in a list of lists.
      results = cursor.fetchall()
      for row in results:
@@ -39,3 +39,6 @@ try:
      #Print("name=%s,surname=%s,id=%d" % \ (f_name, l_name, id ))
 except:
  print("Error: unable to fetch the data")
+
+# Delete Operation
+
